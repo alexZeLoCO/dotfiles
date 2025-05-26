@@ -20,6 +20,7 @@
 
     --nighttab-bg: rgb(25, 25, 25);
     --second-color: rgb(229, 165, 10);
+    background: var(--nighttab-bg) !important;
   }
 
   #scrollbutton-up,
@@ -89,9 +90,8 @@
     padding-right: 5vw;
   }
 
-  /* Window drag space  */
-  :root[tabsintitlebar="true"] #nav-bar {
-    padding-left: 24px !important;
+  .titlebar-spacer[type="post-tabs"] {
+    width: 0px !important;
   }
 
   /* Rules specific to window controls on right layout */
