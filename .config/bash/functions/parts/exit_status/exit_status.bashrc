@@ -31,7 +31,14 @@ function __update_exit_status() {
 }
 
 function __prompt_command_exit_status() {
-    local exit_status="$?"
+    local exit_status
+
+    if [[ -n "${BLE_VERSION-}" && "${_ble_edit_exec_lastexit-}" =~ ^[0-9]+$ ]]; then
+        exit_status="$_ble_edit_exec_lastexit"
+    else
+        exit_status="$?"
+    fi
+
     __update_exit_status "$exit_status"
 }
 
