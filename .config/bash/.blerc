@@ -1,0 +1,14 @@
+# -*- mode: sh; mode: sh-bash -*-
+
+# This ble.sh package version does not support prompt_ps1_* options.
+# Keep custom PS1 from ~/.config/bash/functions/load_prompt.bashrc untouched.
+
+# Disable ble.sh right prompt/transient behavior (if enabled elsewhere).
+bleopt rps1=
+bleopt rps1_transient=
+
+# Optional: hide ble.sh EOF marker for a cleaner custom prompt view.
+bleopt prompt_eol_mark=
+
+# This ble.sh build handles indexed colors more reliably than truecolor in PS1.
+bleopt term_index_colors=256
