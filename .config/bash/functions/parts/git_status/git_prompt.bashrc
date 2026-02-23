@@ -31,7 +31,7 @@ function __update_git_status() {
 	git_state="$(__message_git_status)"
 
 	if [[ -n "$git_state" ]]; then
-		GIT_STATUS="$(link '' "$(bracket "$(color_text "$git_state" "$COLOR_CYAN")")")"
+		GIT_STATUS="$(link '' "$(bracket "$(color_text "$git_state" "$COLOR_GIT")")")"
 	else
 		GIT_STATUS=""
 	fi

@@ -13,7 +13,7 @@ function __message_jobs_status() {
 
 	while IFS= read -r line; do
 		[[ -z "$line" ]] && continue
-		rendered+=$'\n'"${DECORATION_HALF_LINE}$(color_text "$line" "$COLOR_YELLOW")"
+		rendered+=$'\n'"${DECORATION_HALF_LINE}$(color_text "$line" "$COLOR_JOBS")"
 	done <<< "$running_jobs"
 
 	if [[ -z "$rendered" ]]; then

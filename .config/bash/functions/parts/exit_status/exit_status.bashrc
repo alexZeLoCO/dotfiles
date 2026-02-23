@@ -5,22 +5,22 @@ function __message_exit_status() {
 
     case "$exit_status" in
         0)
-            echo "$(color_text "OK.$exit_status" "$COLOR_CYAN")"
+            echo "$(color_text "OK.$exit_status" "$COLOR_STATUS_OK")"
             ;;
         2)
-            echo "$(color_text "BAD.$exit_status" "$COLOR_RED")"
+            echo "$(color_text "BAD USE.$exit_status" "$COLOR_STATUS_BAD_USE")"
             ;;
         130)
-            echo "$(color_text "INTERRUPTED.$exit_status" "$COLOR_ORANGE")"
+            echo "$(color_text "INTERRUPTED.$exit_status" "$COLOR_STATUS_INTERRUPTED")"
             ;;
         126)
-            echo "$(color_text "NOT EXEC.$exit_status" "$COLOR_RED")"
+            echo "$(color_text "NOT EXEC.$exit_status" "$COLOR_STATUS_NOT_EXEC")"
             ;;
         127)
-            echo "$(color_text "NOT FOUND.$exit_status" "$COLOR_RED")"
+            echo "$(color_text "NOT FOUND.$exit_status" "$COLOR_STATUS_NOT_FOUND")"
             ;;
         *)
-            echo "$(color_text "ERR.$exit_status" "$COLOR_RED")"
+            echo "$(color_text "ERR.$exit_status" "$COLOR_STATUS_ERROR")"
             ;;
     esac
 }

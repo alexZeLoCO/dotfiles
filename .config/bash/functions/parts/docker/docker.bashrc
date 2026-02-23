@@ -44,7 +44,7 @@ function __message_docker_status() {
 			"$max_id_width" "${container_ids[$index]}" \
 			"$max_name_width" "${container_names[$index]}" \
 			"$max_state_width" "${container_states[$index]}"
-		rendered+=$'\n'"${DECORATION_HALF_LINE}$(color_text "$row" "$COLOR_LIGHT_BLUE")"
+		rendered+=$'\n'"${DECORATION_HALF_LINE}$(color_text "$row" "$COLOR_DOCKER")"
 	done
 
 	if [[ -z "$rendered" ]]; then
@@ -52,7 +52,7 @@ function __message_docker_status() {
 	fi
 
 	
-    printf '\n%s' "${DECORATION_HALF_LINE}$(color_text "─────DOCKER CONTAINERS─────" "$COLOR_LIGHT_BLUE")"
+    printf '\n%s' "$(title_decoration "$(color_text "DOCKER CONTAINERS" "$COLOR_DOCKER")")"
 	printf '%s' "$rendered"
 }
 

@@ -18,7 +18,7 @@ function __update_venv_status() {
 	venv_state="$(__message_venv_status)"
 
 	if [[ -n "$venv_state" ]]; then
-		VENV_STATUS="$(link '' "$(bracket "$(color_text "$venv_state" "$COLOR_CYAN")")")"
+		VENV_STATUS="$(link '' "$(bracket "$(color_text "$venv_state" "$COLOR_VENV")")")"
 	else
 		VENV_STATUS=""
 	fi

@@ -61,7 +61,7 @@ function __collapse_working_directory() {
 }
 
 function __update_working_directory() {
-    WORKING_DIRECTORY="$(bracket "$(color_text "$(__collapse_working_directory "$PWD")" "$COLOR_CYAN")")"
+    WORKING_DIRECTORY="$(color_text "$(__collapse_working_directory "$PWD")" "$COLOR_PWD")"
 }
 
 function __prompt_command_working_directory() {
